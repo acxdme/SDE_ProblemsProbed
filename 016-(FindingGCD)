@@ -33,3 +33,8 @@ int main(){
         cout<<gcdArray<<endl;
     }
 }
+/* 
+so when finding the Gcd of two numbers A and B  ,such that a is of long long int but cannot be defined under any int(extremely big.
+Then input b as a String and make the number b from it by taking modulus by a at each unit index to get a long long int type b.
+*/
+
