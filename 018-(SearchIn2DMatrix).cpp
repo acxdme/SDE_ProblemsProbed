@@ -1,5 +1,5 @@
 /*
-Time complexity : O()
+Time complexity : O(M+N)
 Space complexity : O(1)
 My approach : start from the 1st row's last column and move down if the target is greater otherwise move leftward in that row , return true if target value is found otherwise if
 it moves out of array bound return false
