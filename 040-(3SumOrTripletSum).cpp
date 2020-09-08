@@ -48,3 +48,24 @@ int main()
 	    cout<<"0"<<endl;
 	}
 	return 0;
+	
+//This code is for checking whether there exist a triplet whose sum is equal to zero
+bool findTriplets(int arr[], int n)
+{ 
+    sort(arr,arr+n);
+    int target=0;
+    for(int i=0;i<n-2;i++)
+    {
+        target = -arr[i];
+        int low=i+1,high=n-1;
+        while(low<high)
+        {
+            if(arr[low]+arr[high]==target)
+              return true;
+            if(arr[low]+arr[high] > target)
+             high--;
+            else low++;
+        }
+    }
+    return false;
+}
