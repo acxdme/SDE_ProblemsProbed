@@ -1,3 +1,11 @@
+/*
+Time complexity : O(nLogn)
+Space complexity : O(N)
+My approach : There are two optimal methods , one is using unordered/ordered map and other is using two pointer approach.
+Resource :https://web.stanford.edu/class/cs9/sample_probs/TwoSum.pdf
+*/
+
+
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) 
@@ -15,9 +23,9 @@ public:
             {
                 answer.push_back(sorted[l].second);
                 answer.push_back(sorted[r].second);
-                return answer;
-                
+                return answer;    
             }
+            
             if(sorted[l].first+sorted[r].first > target)
             {
                 r--;
