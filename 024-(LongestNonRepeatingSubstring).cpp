@@ -6,6 +6,10 @@ Algo :   Declare a unordered_set<char> st
          if the char is not found in st insert  st[r] do save max(st.size()) and increment r;
          else remove str[l] and increment l;
          finaly return/cout the max(st.size());
+
+NOTE: This method uses sliding window in the form of l and r pointers also the hashset is used to find the repeating occurence of a character in the string.
+      This question is generally a hashing question.
+
 */
 
 #include<bits/stdc++.h>
@@ -29,7 +33,7 @@ int main()
 	        if(us.find(str[r])==us.end())
 	        {
 	            us.insert(str[r]);
-	            int k= us.size();
+	            int k= us.size();  // k is equal to r -l + 1;
 	            answer= max(answer,k);
 	            r++;   
 	        }
@@ -44,3 +48,9 @@ int main()
 	}
 	return 0;
 }
+/*
+Method-2  the more optimal method , would be to store the character along with its index in an unordered set , the index would help us to directely jump to the next 
+ 	  valid  position  instead of moving there linearly.
+Time complexity : O(N)
+Space complexity : O(N)
+*/
