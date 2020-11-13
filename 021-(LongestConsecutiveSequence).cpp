@@ -22,3 +22,31 @@ public:
         return res;
     }
 };
+
+//another method of writing code , more intuitive way it is!
+class Solution {
+public:
+    int longestConsecutive(vector<int> &num) {
+        int n = num.size();
+        unordered_set<int> hash(num.begin(),num.end());
+        int res = 0;
+        int count = 0;
+        for(int i=0;i<n;i++)
+        {
+            if(hash.find(num[i]-1)!= hash.end()) continue;
+            else
+            {
+                count = 0 ;
+                while(hash.find(num[i]++)!= hash.end())
+                {
+                    count++;
+                    
+                }
+                res = max(res,count);
+                    
+            }
+        }
+        
+        return  res;
+    }
+};
