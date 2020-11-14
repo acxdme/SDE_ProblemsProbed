@@ -12,9 +12,9 @@ public:
     int removeDuplicates(vector<int>& nums) 
     {
        int n = nums.size();
-        if(n==0)
+        if(n==0 or n==1)
             return 0;
-        int i= 0;
+        int i = 0;
        for(int j=0;j<n;j++)
        {
            if(nums[i] != nums[j])
