@@ -28,3 +28,29 @@ public:
         return i+1;
     }
 };
+
+//Another way of writing 
+
+int remove_duplicate(int A[],int N)
+{
+   if( N < 2) return N;
+   int i =1, j=1;
+   
+   while(i<N)
+   {
+       if( A[i] == A[i-1] ) 
+       {
+           i++;
+       }
+       else //unique element found
+       {
+           A[j] = A[i]; // transfer the value at ith index to the unique maintaing index j;
+            j++;
+            i++;
+       }
+       
+      
+   }
+   
+    return j;
+}
