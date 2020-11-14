@@ -41,3 +41,54 @@ public:
        return answer; 
     }
 };
+
+//Most optimal Method Two pointer approach
+/*
+Time complexity : O(N)
+Space complexity : O(1)
+My approach : Use the fact of the dynamic programming concept , use two pointer approach .
+*/
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        int  n = height.size();
+        if(n < 3) return 0;
+        int l_max=0,r_max=0;
+        int res =0;
+        int l=0 , r=n-1;
+        
+        while(l<r)
+        {
+            if(height[l] <= height[r])
+            {
+                if(height[l] >= l_max)
+                {
+                    l_max = height[l];
+                    l++;
+                }
+                else
+                {
+                    res += l_max - height[l];
+                    l++;
+                }
+            }
+            else
+            {
+               if(height[r] >= r_max)
+               {
+                   r_max = height[r];
+                   r--;
+               }
+                else
+                {
+                    res += r_max - height[r];
+                    r--;
+                }
+            }
+        }
+        
+        return res;
+        
+    }
+};
+
