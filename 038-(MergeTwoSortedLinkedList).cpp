@@ -1,7 +1,7 @@
 /*
 Time complexity : O(N+M) , where n and m are the sizes of the two sorted linked lists.
 Space complexity : O(1)
-Algo : Create a node type pointer Last which actually merges the two linkes lists,
+Algo :  Create a node type pointer Last(merger) which actually merges the two linkes lists,
         Firstly check if any one of the linked list is null or not.
         if both of them are not null fix the position of the head(beginning of the merged list)
         also place last to the head and increase head1/ head2 accordingly.
