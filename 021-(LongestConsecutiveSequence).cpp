@@ -37,7 +37,7 @@ public:
             else
             {
                 count = 0 ;
-                while(hash.find(num[i]++)!= hash.end())
+                while(hash.find(num[i]++)!= hash.end()) // nums[i] ki value agle iteration pe change hogi.
                 {
                     count++;
                     
