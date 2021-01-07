@@ -49,7 +49,7 @@ int main()
 	return 0;
 }
 /*
-Method-2  the more optimal method , would be to store the character along with its index in an unordered set , the index would help us to directely jump to the next 
+Method-2  the more optimal method , would be to store the character along with its index in an unordered map , the index would help us to directely jump to the next 
  	  valid  position  instead of moving there linearly.
 Time complexity : O(N)
 Space complexity : O(N)
